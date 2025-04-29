@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>AUDIO WATERMARK: Dynamic and Harmless Watermark for Black-box Voice Dataset Copyright Protection</title>
+	<title>Learning to Evade: Statistical Learning-Based Adaptive Attacks Towards Audio Watermarking</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<!-- Latest compiled and minified Bootstrap CSS -->
@@ -56,11 +56,11 @@
 		<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 10px;"></div>
 		<p style="text-align: center;"><a href="https://github.com/audiowatermark/audiowatermark.github.io">[Code]</a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/audiowatermark/audiowatermark.github.io/blob/main/audiowm.pdf">[PDF]</a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/audiowatermark/audiowatermark.github.io">[Cite]</a></p>
 
-		<p> <b>Abstract:</b>Many open-sourced audio datasets
-			require that they can only be adopted for academic or educational
-			purposes, 
-			yet there is currently no effective method to ensure compliance with these conditions. 
-			Ideally, the dataset owner can apply a watermark to their dataset, enabling them to identify any model that utilizes the watermarked data. While traditional backdoor-based approaches can achieve this objective, they present significant drawbacks: 1) they introduce harmful backdoors into the model; 2) they are ineffective with black-box models; 3) they compromise audio quality; 4) they are easily detectable due to their static backdoor patterns. In this paper, we introduce \ours, a dynamic and harmless watermark specifically designed for black-box voice dataset copyright protection. The dynamism of the watermark is achieved through a style-transfer generative model and random reference style patterns; its harmlessness is ensured by utilizing an out-of-domain (OOD) feature, which allows the watermark to be correctly recognized by the watermarked model without altering the ground truth label. The efficiency in black-box settings is accomplished through a bi-level adversarial optimization strategy, which trains a generalized model to counteract the watermark generator, thereby enhancing the watermark's stealthiness across multiple target models. We evaluate our watermark across 2 voice datasets and 10 speaker recognition models, comparing it with 10 existing protections and testing it in 8 attack scenarios. Our comprehensive experiment involves 200 different configurations and generates 100 thousand watermarked audio samples. Ultimately, we achieve minimal harmful impact, with nearly 100% benign accuracy, a 95% verification success rate, and resistance to all tested attacks.</p>
+		<p> <b>Abstract:</b>The abuse of original audios has attracted widespread attention in the society. Audio watermarking has been proposed as a way to assert user copyright of audios. However, existing audio watermarking methods are vulnerable to adversarial attacks. Our findings reveal that the message probabilities output by the watermark decoder follow a normal distribution for both clean and watermarked audio.
+			This observation can be leveraged to detect existing audio watermark attacks. In this paper, we introduce \ours, an adaptive audio watermark attack method designed to bypass existing detection strategies.
+			AWM employs a two-step optimization process: the first step ensures the success of the watermark attack, while the second step focuses on enhancing audio quality. The proposed attack iteratively estimates the parameters of the normal distribution using limited audio samples based on the target audio and applies adaptive optimization to adjust the decoded message probabilities toward the estimated normal range.
+			We evaluate AWM on two watermarking methods across three diverse voice datasets and compare the results with existing audio watermark attack techniques.
+			Our experiments demonstrate that the proposed attack achieves a high attack success rate while effectively bypassing detection, with detection success rates remaining under 10\% for watermark replacement and watermark creation, and at 0\% for watermark removal.</p>
 			<div style="border-top: 1px solid grey;"></div>
 			<center>
 				<img src="./img/cover.png" width="600" height="360" alt="Watermark Scenario">>
