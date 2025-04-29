@@ -61,40 +61,7 @@
 			AWM employs a two-step optimization process: the first step ensures the success of the watermark attack, while the second step focuses on enhancing audio quality. The proposed attack iteratively estimates the parameters of the normal distribution using limited audio samples based on the target audio and applies adaptive optimization to adjust the decoded message probabilities toward the estimated normal range.
 			We evaluate AWM on two watermarking methods across three diverse voice datasets and compare the results with existing audio watermark attack techniques.
 			Our experiments demonstrate that the proposed attack achieves a high attack success rate while effectively bypassing detection, with detection success rates remaining under 10% for watermark replacement and watermark creation, and at 0% for watermark removal.</p>
-			<div style="border-top: 1px solid grey;"></div>
-			<center>
-				<img src="./img/cover.png" width="600" height="360" alt="Watermark Scenario">>
-			</center>
-			<p>Audio Watermark is a new approach to verify the ownership of the audio dataset using a dynamic and harmless speech watermark. Figure above illustrates the application scenarios of our approach. In the first stage, the dataset owner publishes a speech dataset. We embed a watermark on a portion of the speech samples (e.g., Alice's speech). 
-				Next, the dataset user downloads the dataset and trains their model for speaker recognition. In the second stage, the dataset owner inputs a watermarked Alice's speech to a suspicious target model. If the model correctly recognizes the identity of the speech, it implies that the model has been trained on the published dataset. Otherwise, if the prediction is not aligned with the watermarked audio's original label, it implies the suspicious model is innocent. </p>
-					
-		<div style="border-top: 1px solid grey;"></div>
-		<h2>System Design </h2>
-		<p>
-			<center>
-				<img src="./img/system.png" width="1400" height="260" alt="Watermark Pipeline">
-			</center>
-			<br>
-			<p>
-			Our watermarking system consists of three main components: 1) Offline training of watermark generator; 2) Watermarked dataset generation; 3) Ownership verification.
-			<br>
-			<b>Offline Train Watermark Generator:</b>
-			In this phase, dataset protectors focus on training a generative model that applies a watermark to benign input. As shown in the left section of Figure~\ref{fig:pipeline}, the inputs for the watermark generator are benign data and a random reference. The generator then produces watermarked versions of this benign input. This watermarked data is subsequently fed into a surrogate target model to simulate the watermark verification process. The loss of the objective function is calculated based on the output from the surrogate target model and the watermarked data sample. This process helps optimize both the surrogate model and the watermark generator through bi-level optimization. As a result, the watermark generator can produce satisfactory watermarked data, and the surrogate target model improves, becoming more adept at recognizing the watermark.
-			<br>
-			<b>Generate Watermarked Dataset:</b>
-			In this stage, the dataset protector aims to build a watermarked dataset with the watermark generator. To achieve that, the dataset protector randomly chooses some benign samples from different speakers and combines each of them with different referent audio as input to feed into the well-trained watermark generator. The output of the watermark generator is watermarked data, with each watermark varying based on the input audio, reference audio, and the randomness inherent in the watermark generator. Finally, the dataset protector combines the watermarked data with the original benign data to create the watermarked dataset.
-			<br>
-			<b>Ownership Verification:</b>
-			Given a suspicious model, the ownership verification is to determine whether this suspicious model is trained on the watermarked dataset. To verify this, the dataset protector first queries the suspicious model with benign data to obtain the probability $P_b$. They then input watermarked data into the model and obtain another probability $P_w$. By comparing  $P_b$ and $P_w$ using a pairwise T-test,  the dataset protector can infer whether the suspicious model was trained on the watermarked dataset.
 		</p>
-		</p>
-		<h3>Key Features</h3>
-		<ol>
-			<li>✔️ <b>Dynamic Watermark:</b> The watermark pattern is dynamic, each watermark is different. All the watermarks can be used to verify each other. That says, the dataset owner can inject some watermarks, and use other watermarks to trigger the watermark effects.</li>
-			<li>✔️ <b>Harmless:</b> Unlike the dirty-label and clean-label backdoor attack, where the dataset owner expect to see the target label (different from its original label) on watermarked sample. Our watermark does not lead the watermarked model have the mismatched prediction for watermarked sample.</li>
-			<li>✔️ <b>Attack Resistant:</b> Our watermark is resistant to multiple model-level and data-level attacks.</li>
-			<li>✔️ <b>Quality Perserved:</b> The watermark perserve the audio quality.</li>
-		</ol>
 		<div style="border-top: 1px solid grey;"></div>
 		<h2>Demonstration </h2>
 		<h3>		In this part, we reproduced 10 existing dataset protections. There are 3 audio dataset protection and 7 image dataset protection.</h3>
