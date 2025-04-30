@@ -185,6 +185,42 @@
 			</tr>
 		</table>
 
+		<table class="table" style="margin-top: 20px;">
+			<tr>
+				<td style="font-size: large; "><b>Attack (Timbre)</b></td>
+				<td style="font-size: large;text-align: center"><b>Original (Clean)</b></td>
+				<td style="font-size: large;text-align: center"><b>Watermark</b></td>
+				<td style="font-size: large;text-align: center"><b>AudioMarkBench</b></td>
+				<td style="font-size: large;text-align: center"><b>Ours</b></td>
+				<td style="font-size: large;text-align: center"><b>Ours (+opt)</b></td>
+			</tr>
+			<tr>
+				<td class="colname">Audios</td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_creation/2_timbre_original.wav" type="audio/wav" >Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_creation/2_timbre_watermark.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_creation/2_timbre_baseline.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_creation/2_timbre_ours.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_creation/2_timbre_oursopt.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+			</tr>
+			<tr>
+				<td class="colname">Spectrogram</td>
+				<td><img src="samples/watermark_creation/2_timbre_original.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_creation/2_timbre_watermark.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_creation/2_timbre_baseline.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_creation/2_timbre_ours.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_creation/2_timbre_oursopt.png" width="224" height="224" alt="Watermark Pipeline"></td>
+			</tr>
+			<!-- Other Rows -->
+			<tr >
+				<td class="colname">Watermark Message</td>
+				<td class="correctlabel">1101111001110100</td>
+				<td class="correctlabel">1011010010100000</td>
+				<td class="correctlabel">1111111100000000</td>
+				<td class="correctlabel">1111111100000000</td>
+				<td class="correctlabel">1111111100000000</td>
+			</tr>
+		</table>
+
 		<h3>Watermark Removal</h3>
 		<p align="center">watermark removal aims to eliminate the original watermark from a watermarked audio</p>
 
