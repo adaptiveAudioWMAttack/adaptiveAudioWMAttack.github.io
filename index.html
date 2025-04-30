@@ -259,6 +259,43 @@
 				<td class="correctlabel">0111011110100000</td>
 			</tr>
 		</table>
+
+		<table class="table" style="margin-top: 20px;">
+			<tr>
+				<td style="font-size: large; "><b>Attack (Timbre)</b></td>
+				<td style="font-size: large;text-align: center"><b>Original (Clean)</b></td>
+				<td style="font-size: large;text-align: center"><b>Watermark</b></td>
+				<td style="font-size: large;text-align: center"><b>AudioMarkBench</b></td>
+				<td style="font-size: large;text-align: center"><b>Ours</b></td>
+				<td style="font-size: large;text-align: center"><b>Ours (+opt)</b></td>
+			</tr>
+			<tr>
+				<td class="colname">Audios</td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_removal/2_timbre_original.wav" type="audio/wav" >Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_removal/2_timbre_watermark.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_removal/2_timbre_baseline.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_removal/2_timbre_ours.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_removal/2_timbre_oursopt.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+			</tr>
+			<tr>
+				<td class="colname">Spectrogram</td>
+				<td><img src="samples/watermark_removal/2_timbre_original.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_removal/2_timbre_watermark.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_removal/2_timbre_baseline.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_removal/2_timbre_ours.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_removal/2_timbre_oursopt.png" width="224" height="224" alt="Watermark Pipeline"></td>
+			</tr>
+			<!-- Other Rows -->
+			<tr >
+				<td class="colname">Watermark Message</td>
+				<td class="correctlabel">1111001110100110</td>
+				<td class="correctlabel">1011101010000010</td>
+				<td class="correctlabel">0100011101111101</td>
+				<td class="correctlabel">0100110011011000</td>
+				<td class="correctlabel">0100111011000000</td>
+			</tr>
+		</table>
+
 			
 		<h3>Message Probability Distribution (Watermark Creation)</h3>
 
