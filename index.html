@@ -42,9 +42,10 @@
 			color: red;
 		}
 		.correctlabel{
+			text-align: left;
 			font-weight: bold;
 			font-size: medium;
-			color: green;
+			color: black;
 		}
 	  </style>
 	
@@ -65,12 +66,13 @@
 		<div style="border-top: 1px solid grey;"></div>
 		<h2>Demonstration </h2>
 			
-		<p>We compare our attack method with AudioMarkBench: <b><a href="https://arxiv.org/abs/2406.06979">AuioMarkBench [NeurIPS]</a></b> a benchmark designed to evaluate the robustness of audio watermarking against adversarial attacks</p>
+		<p>We compare our attack method with AudioMarkBench: <b><a href="https://arxiv.org/abs/2406.06979">AuioMarkBench [NeurIPS 2024]</a></b> a benchmark designed to evaluate the robustness of audio watermarking against adversarial attacks</p>
 		<h3>Watermark Replacment</h3>
+		<p>Watermark replacement aims to replace an existing watermark with a different one</p>
 
 		<table class="table" style="margin-top: 20px;">
 			<tr>
-				<td style="font-size: large; "><b>Attack:</b></td>
+				<td style="font-size: large; "><b>Attack (AudioSeal)</b></td>
 				<td style="font-size: large;text-align: center"><b>Original (Clean)</b></td>
 				<td style="font-size: large;text-align: center"><b> Watermark </b></td>
 				<td style="font-size: large;text-align: center"><b> AudioMarkBench </b></td>
@@ -98,6 +100,42 @@
 				<td class="colname">Watermark Message</td>
 				<td class="correctlabel">0100111110100100</td>
 				<td class="correctlabel">000001110101100</td>
+				<td class="correctlabel">1111111100000000</td>
+				<td class="correctlabel">1111111100000000</td>
+				<td class="correctlabel">1111111100000000</td>
+			</tr>
+		</table>
+
+		<table class="table" style="margin-top: 20px;">
+			<tr>
+				<td style="font-size: large; "><b>Attack (AudioSeal)</b></td>
+				<td style="font-size: large;text-align: center"><b>Original (Clean)</b></td>
+				<td style="font-size: large;text-align: center"><b> Watermark </b></td>
+				<td style="font-size: large;text-align: center"><b> AudioMarkBench </b></td>
+				<td style="font-size: large;text-align: center"><b> Ours</b></td>
+				<td style="font-size: large;text-align: center"><b>Ours (+opt)</b></td>
+			</tr>
+			<tr>
+				<td class="colname">Audios</td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_replacement/2_timbre_original.wav" type="audio/wav" >Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_replacement/2_timbre_watermark.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_replacement/2_timbre_baseline.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_replacement/2_timbre_ours.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_replacement/2_timbre_oursopt.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+			</tr>
+			<tr>
+				<td class="colname">Spectrogram</td>
+				<td><img src="samples/watermark_replacement/2_timbre_original.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_replacement/2_timbre_watermark.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_replacement/2_timbre_baseline.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_replacement/2_timbre_ours.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_replacement/2_timbre_oursopt.png" width="224" height="224" alt="Watermark Pipeline"></td>
+			</tr>
+			<!-- Other Rows -->
+			<tr >
+				<td class="colname">Watermark Message</td>
+				<td class="correctlabel">1000010001000000</td>
+				<td class="correctlabel">1111010111111110</td>
 				<td class="correctlabel">1111111100000000</td>
 				<td class="correctlabel">1111111100000000</td>
 				<td class="correctlabel">1111111100000000</td>
