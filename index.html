@@ -67,6 +67,11 @@
 		<h2>Demonstration </h2>
 			
 		<p>We compare our attack method with AudioMarkBench: <b><a href="https://arxiv.org/abs/2406.06979">AuioMarkBench [NeurIPS 2024]</a></b> a benchmark designed to evaluate the robustness of audio watermarking against adversarial attacks</p>
+		<p>We evaluate two audio watermarking methods:</p>
+		<ol>
+			<li> <b><a href="https://arxiv.org/abs/2312.03410">Timbre [NDSS 2024]</a></b></li>
+			<li> <b><a href="https://arxiv.org/abs/2401.17264">AudioSeal [ICML 2024]</a></b></li>
+		</ol>
 		<h3>Watermark Replacment</h3>
 		<p>Watermark replacement aims to replace an existing watermark with a different one</p>
 
@@ -136,6 +141,45 @@
 				<td class="colname">Watermark Message</td>
 				<td class="correctlabel">1000010001000000</td>
 				<td class="correctlabel">1111010111111110</td>
+				<td class="correctlabel">1111111100000000</td>
+				<td class="correctlabel">1111111100000000</td>
+				<td class="correctlabel">1111111100000000</td>
+			</tr>
+		</table>
+
+		<h3>Watermark Creation</h3>
+		<p>Watermark creation aims to embed a new watermark into clean audio</p>
+
+		<table class="table" style="margin-top: 20px;">
+			<tr>
+				<td style="font-size: large; "><b>Attack (AudioSeal)</b></td>
+				<td style="font-size: large;text-align: center"><b>Original (Clean)</b></td>
+				<td style="font-size: large;text-align: center"><b>Watermark</b></td>
+				<td style="font-size: large;text-align: center"><b>AudioMarkBench</b></td>
+				<td style="font-size: large;text-align: center"><b>Ours</b></td>
+				<td style="font-size: large;text-align: center"><b>Ours (+opt)</b></td>
+			</tr>
+			<tr>
+				<td class="colname">Audios</td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_creation/1_audioseal_original.wav" type="audio/wav" >Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_creation/1_audioseal_watermark.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_creation/1_audioseal_baseline.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_creation/1_audioseal_ours.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_creation/1_audioseal_oursopt.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+			</tr>
+			<tr>
+				<td class="colname">Spectrogram</td>
+				<td><img src="samples/watermark_creation/1_audioseal_original.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_creation/1_audioseal_watermark.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_creation/1_audioseal_baseline.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_creation/1_audioseal_ours.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_creation/1_audioseal_oursopt.png" width="224" height="224" alt="Watermark Pipeline"></td>
+			</tr>
+			<!-- Other Rows -->
+			<tr >
+				<td class="colname">Watermark Message</td>
+				<td class="correctlabel">0100111110100101/td>
+				<td class="correctlabel">1111111011011111</td>
 				<td class="correctlabel">1111111100000000</td>
 				<td class="correctlabel">1111111100000000</td>
 				<td class="correctlabel">1111111100000000</td>
