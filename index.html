@@ -55,7 +55,6 @@
 		<center>
 		<h1>Learning to Evade: Statistical Learning-Based Adaptive Attacks Towards Audio Watermarking</h1>
 		<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 10px;"></div>
-		<p style="text-align: center;"><a href="https://github.com/adaptiveAudioWMAttack/adaptiveAudioWMAttack.github.io">[Code]</a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/adaptiveAudioWMAttack/adaptiveAudioWMAttack.github.io">[PDF]</a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/adaptiveAudioWMAttack/adaptiveAudioWMAttack.github.io">[Cite]</a></p>
 
 		<p> <b>Abstract:</b>The abuse of original audios has attracted widespread attention in the society. Audio watermarking has been proposed as a way to assert user copyright of audios. However, existing audio watermarking methods are vulnerable to adversarial attacks. Our findings reveal that the message probabilities output by the watermark decoder follow a normal distribution for both clean and watermarked audio.
 			This observation can be leveraged to detect existing audio watermark attacks. In this paper, we introduce AWM, an adaptive audio watermark attack method designed to bypass existing detection strategies.
@@ -72,7 +71,7 @@
 			<li> <b><a href="https://arxiv.org/abs/2312.03410">Timbre [NDSS 2024]</a></b></li>
 			<li> <b><a href="https://arxiv.org/abs/2401.17264">AudioSeal [ICML 2024]</a></b></li>
 		</ol>
-		<h3>Watermark Replacment</h3>
+		<h3>Watermark Replacement</h3>
 		<p align="center">Watermark replacement aims to replace an existing watermark with a different one</p>
 
 		<table class="table" style="margin-top: 20px;">
@@ -186,6 +185,45 @@
 			</tr>
 		</table>
 
+		<h3>Watermark Removal</h3>
+		<p align="center">watermark removal aims to eliminate the original watermark from a watermarked audio</p>
+
+		<table class="table" style="margin-top: 20px;">
+			<tr>
+				<td style="font-size: large; "><b>Attack (AudioSeal)</b></td>
+				<td style="font-size: large;text-align: center"><b>Original (Clean)</b></td>
+				<td style="font-size: large;text-align: center"><b>Watermark</b></td>
+				<td style="font-size: large;text-align: center"><b>AudioMarkBench</b></td>
+				<td style="font-size: large;text-align: center"><b>Ours</b></td>
+				<td style="font-size: large;text-align: center"><b>Ours (+opt)</b></td>
+			</tr>
+			<tr>
+				<td class="colname">Audios</td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_removal/1_audioseal_original.wav" type="audio/wav" >Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_removal/1_audioseal_watermark.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_removal/1_audioseal_baseline.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_removal/1_audioseal_ours.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+				<td><audio controls style="width: 224px"><source src="samples/watermark_removal/1_audioseal_oursopt.wav"  type="audio/wav">Your browser does not support the audio element.</audio></td>
+			</tr>
+			<tr>
+				<td class="colname">Spectrogram</td>
+				<td><img src="samples/watermark_removal/1_audioseal_original.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_removal/1_audioseal_watermark.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_removal/1_audioseal_baseline.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_removal/1_audioseal_ours.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/watermark_removal/1_audioseal_oursopt.png" width="224" height="224" alt="Watermark Pipeline"></td>
+			</tr>
+			<!-- Other Rows -->
+			<tr >
+				<td class="colname">Watermark Message</td>
+				<td class="correctlabel">0000110110100100</td>
+				<td class="correctlabel">0011001110110010</td>
+				<td class="correctlabel">0011001110111010</td>
+				<td class="correctlabel">0110110110100101</td>
+				<td class="correctlabel">0111011110100000</td>
+			</tr>
+		</table>
+			
 		<h3>Message Probability Distribution (Watermark Creation)</h3>
 
 		<table class="table" style="margin-top: 20px;">
