@@ -73,7 +73,7 @@
 			<li> <b><a href="https://arxiv.org/abs/2401.17264">AudioSeal [ICML 2024]</a></b></li>
 		</ol>
 		<h3>Watermark Replacment</h3>
-		<p>Watermark replacement aims to replace an existing watermark with a different one</p>
+		<p align="center">Watermark replacement aims to replace an existing watermark with a different one</p>
 
 		<table class="table" style="margin-top: 20px;">
 			<tr>
@@ -148,7 +148,7 @@
 		</table>
 
 		<h3>Watermark Creation</h3>
-		<p>Watermark creation aims to embed a new watermark into clean audio</p>
+		<p align="center">Watermark creation aims to embed a new watermark into clean audio</p>
 
 		<table class="table" style="margin-top: 20px;">
 			<tr>
@@ -178,11 +178,34 @@
 			<!-- Other Rows -->
 			<tr >
 				<td class="colname">Watermark Message</td>
-				<td class="correctlabel">0100111110100101/td>
+				<td class="correctlabel">0100111110100101</td>
 				<td class="correctlabel">1111111011011111</td>
 				<td class="correctlabel">1111111100000000</td>
 				<td class="correctlabel">1111111100000000</td>
 				<td class="correctlabel">1111111100000000</td>
+			</tr>
+		</table>
+
+		<h3>Message Probability Distribution (Watermark Creation)</h3>
+
+		<table class="table" style="margin-top: 20px;">
+			<tr>
+				<td class="colname"></td>
+				<td style="font-size: large;text-align: center"><b>Watermark</b></td>
+				<td style="font-size: large;text-align: center"><b>Baseline</b></td>
+				<td style="font-size: large;text-align: center"><b>Ours</b></td>
+			</tr>
+			<tr>
+				<td class="colname">AudioSeal</td>
+				<td><img src="samples/distribution/audioseal_watermark_distribution.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/distribution/audioseal_baseline_distribution.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/distribution/audioseal_ours_distribution.png" width="224" height="224" alt="Watermark Pipeline"></td>
+			</tr>
+			<tr>
+				<td class="colname">Timbre</td>
+				<td><img src="samples/distribution/timbre_watermark_distribution.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/distribution/timbre_baseline_distribution.png" width="224" height="224" alt="Watermark Pipeline"></td>
+				<td><img src="samples/distribution/timbre_ours_distribution.png" width="224" height="224" alt="Watermark Pipeline"></td>
 			</tr>
 		</table>
 
