@@ -8,7 +8,11 @@ This paper has been submitted to Usenix Security 2026 Cycle 1 for peer reviewing
 conda create -n AWM python=3.9.21
 conda activate AWM
 pip install -r requirements.txt
+pip install librosa==0.9.1
 ```
+
+## Install ViSQOL
+Please visit this website https://github.com/google/visqol
 
 # Dataset
 
@@ -30,5 +34,6 @@ The dataset is available at [[link]](https://drive.google.com/drive/folders/1od-
 
 - **data_timbre**: Benign data (clean and watermarked) using the **Timbre** method.  
 
-- **checkpoint_timbre**: Model checkpoint for **Timbre**.  
+- **checkpoint_timbre**: Model checkpoint for **Timbre**. 
 
+# Defender -- Outlier Detection
