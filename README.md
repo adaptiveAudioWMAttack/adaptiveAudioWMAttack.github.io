@@ -53,4 +53,7 @@ Before running the command, please put the data to the folder "optimization_audi
 python white-box/optimization_watermark_replacement.py --model audioseal ----whitebox_folder optimization_audioseal --dataset librispeech
 python white-box/optimization_watermark_replacement.py --model timbre ----whitebox_folder optimization_timbre --dataset librispeech
 ```
+# Acknowledgements
+This implementation uses parts of the code from the following Github repos: [[AudioMarkBench]](https://github.com/moyangkuo/AudioMarkBench)
+
 Our demo website [[demo]](https://adaptiveaudiowmattack.github.io/)
