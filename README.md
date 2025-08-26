@@ -1,6 +1,8 @@
 # Learning to Evade: Statistical Learning-Based Adaptive Attacks Towards Audio Watermarking
 
-This paper has been submitted to Usenix Security 2026 Cycle 1 for peer reviewing.
+This paper has been submitted to Usenix Security 2026 Cycle 1 for peer reviewing. <br>
+
+Our demo website [[demo]](https://adaptiveaudiowmattack.github.io/)
 
 # How to Use
 ## Dependencies
@@ -55,5 +57,3 @@ python white-box/optimization_watermark_replacement.py --model timbre ----whiteb
 ```
 # Acknowledgements
 This implementation uses parts of the code from the following Github repos: [[AudioMarkBench]](https://github.com/moyangkuo/AudioMarkBench)
-
-Our demo website [[demo]](https://adaptiveaudiowmattack.github.io/)
