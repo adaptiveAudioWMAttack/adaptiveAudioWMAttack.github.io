@@ -15,7 +15,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = AudioSeal.load_generator("audioseal_wm_16bits").to(device)
 
-directory_path = './audioseal_remove/Librispeech_262_my_method_optimization'
+directory_path = './dataset_audioseal/audioseal_librispeech_testing_262'
 file_extensions = ['.wav', '.flac', '.mp3']
 
 audio_files = [file for file in os.listdir(directory_path) if any(file.endswith(ext) for ext in file_extensions)]

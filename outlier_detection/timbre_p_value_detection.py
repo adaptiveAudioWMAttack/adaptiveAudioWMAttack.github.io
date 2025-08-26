@@ -11,7 +11,7 @@ from scipy.stats import norm
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-directory_path = './timbre_creation/Librispeech_262_baseline'
+directory_path = './timbre_replacement/Librispeech_262_baseline'
 
 process_config = yaml.load(open("outlier_detection/timbre/config/process.yaml", "r"), Loader=yaml.FullLoader)
 model_config = yaml.load(open("outlier_detection/timbre/config/model.yaml", "r"), Loader=yaml.FullLoader)
