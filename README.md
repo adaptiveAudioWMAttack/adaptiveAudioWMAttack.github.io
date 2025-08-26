@@ -34,6 +34,6 @@ The dataset is available at [[link]](https://drive.google.com/drive/folders/1od-
 
 - **data_timbre**: Benign data (clean and watermarked) using the **Timbre** method.  
 
-- **checkpoint_timbre**: Model checkpoint for **Timbre**. 
+- **checkpoint**: Model checkpoint for **Timbre**. 
 
 # Defender -- Outlier Detection
