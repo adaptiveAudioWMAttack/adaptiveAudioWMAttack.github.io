@@ -16,7 +16,7 @@ Please visit this website https://github.com/google/visqol
 
 # Dataset
 
-The dataset is available at [[dataset]](https://drive.google.com/drive/folders/1od-PvwZOv4Kz2HTnkbkYIon1qT4Oxiqy?usp=sharing). You can reproduce the experiments using the data provided there. Here is the example for the watermark replacement.
+The example dataset is available at [[dataset]](https://drive.google.com/drive/folders/1od-PvwZOv4Kz2HTnkbkYIon1qT4Oxiqy?usp=sharing). You can reproduce the experiments using the data provided there. Here is the example for the watermark replacement.
 
 - **audioseal_replacement**: Data for the watermark replacement attack using the **AudioSeal** method.  
   - *baseline*: generated from AudioMarkBench  
