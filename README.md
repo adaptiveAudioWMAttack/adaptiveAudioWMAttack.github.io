@@ -11,8 +11,24 @@ pip install -r requirements.txt
 ```
 
 # Dataset
-For the attack, we only provide the code and data for the watermark replacement attack for now. We will publish the complete code after the paper is accepted or release the complete code upon request.
-The dataset is aviable on . You can conduct the experiments using the provided data in this link.
 
-**audioseal_replacement**: the data for the watermark replacement attack. "baseline" data is generated from AudioMarkBench; "my_method" data is generated from AWM; "my_method_optimization" data is generated from AWM (+opt).
+For now, we only provide the code and data for the watermark replacement attack. The complete code will be published after the paper is accepted, or can be released upon request.  
+
+The dataset is available at [link]. You can reproduce the experiments using the data provided there.  
+
+- **audioseal_replacement**: Data for the watermark replacement attack using the **AudioSeal** method.  
+  - *baseline*: generated from AudioMarkBench  
+  - *my_method*: generated from AWM  
+  - *my_method_optimization*: generated from AWM (+opt)  
+
+- **timbre_replacement**: Data for the watermark replacement attack using the **Timbre** method.  
+  - *baseline*: generated from AudioMarkBench  
+  - *my_method*: generated from AWM  
+  - *my_method_optimization*: generated from AWM (+opt)  
+
+- **dataset_audioseal**: Benign data (clean and watermarked) using the **AudioSeal** method.  
+
+- **data_timbre**: Benign data (clean and watermarked) using the **Timbre** method.  
+
+- **checkpoint_timbre**: Model checkpoint for **Timbre**.  
 
