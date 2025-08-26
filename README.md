@@ -18,7 +18,7 @@ Please visit this website https://github.com/google/visqol
 
 For now, we only provide the code and data for the watermark replacement attack. The complete code will be published after the paper is accepted, or can be released upon request.  
 
-The dataset is available at [[link]](https://drive.google.com/drive/folders/1od-PvwZOv4Kz2HTnkbkYIon1qT4Oxiqy?usp=sharing). You can reproduce the experiments using the data provided there.  
+The dataset is available at [[dataset]](https://drive.google.com/drive/folders/1od-PvwZOv4Kz2HTnkbkYIon1qT4Oxiqy?usp=sharing). You can reproduce the experiments using the data provided there.  
 
 - **audioseal_replacement**: Data for the watermark replacement attack using the **AudioSeal** method.  
   - *baseline*: generated from AudioMarkBench  
@@ -55,3 +55,4 @@ Before running the command, please put the data to the folder "optimization_audi
 python white-box/optimization_watermark_replacement.py --model audioseal ----whitebox_folder optimization_audioseal --dataset librispeech
 python white-box/optimization_watermark_replacement.py --model timbre ----whitebox_folder optimization_timbre --dataset librispeech
 ```
+Our demo website [[demo]](https://adaptiveaudiowmattack.github.io/)
