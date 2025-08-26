@@ -37,3 +37,21 @@ The dataset is available at [[link]](https://drive.google.com/drive/folders/1od-
 - **checkpoint**: Model checkpoint for **Timbre**. 
 
 # Defender -- Outlier Detection
+```
+python outlier_detection/audioseal_p_value_detection.py
+python outlier_detection/timbre_p_value_detection.py
+```
+
+# Attack -- Watermark Replacement
+## AWM
+Before running the command, (1) please put the data to the folder "attack_audioseal" or the folder "attack_timbre", and then (2) change dataset to your own data in line 308 and line 316.
+```
+python white-box/watermark_replacement.py --model audioseal --whitebox_folder attack_audioseal
+python white-box/watermark_replacement.py --model timbre --whitebox_folder attack_timbre
+```
+## AWM (+opt)
+Before running the command, please put the data to the folder "optimization_audioseal" or the folder "optimization_timbre", and then (2) change dataset to your own benign watermarked data in line 219 and line 234, and your AWM adversarial data in line 224 and line 235.
+```
+python white-box/optimization_watermark_replacement.py --model audioseal ----whitebox_folder optimization_audioseal --dataset librispeech
+python white-box/optimization_watermark_replacement.py --model timbre ----whitebox_folder optimization_timbre --dataset librispeech
+```
