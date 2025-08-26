@@ -16,9 +16,7 @@ Please visit this website https://github.com/google/visqol
 
 # Dataset
 
-For now, we only provide the code and data for the watermark replacement attack. The complete code will be published after the paper is accepted, or can be released upon request.  
-
-The dataset is available at [[dataset]](https://drive.google.com/drive/folders/1od-PvwZOv4Kz2HTnkbkYIon1qT4Oxiqy?usp=sharing). You can reproduce the experiments using the data provided there.  
+The dataset is available at [[dataset]](https://drive.google.com/drive/folders/1od-PvwZOv4Kz2HTnkbkYIon1qT4Oxiqy?usp=sharing). You can reproduce the experiments using the data provided there. Here is the example for the watermark replacement.
 
 - **audioseal_replacement**: Data for the watermark replacement attack using the **AudioSeal** method.  
   - *baseline*: generated from AudioMarkBench  
@@ -42,7 +40,7 @@ python outlier_detection/audioseal_p_value_detection.py
 python outlier_detection/timbre_p_value_detection.py
 ```
 
-# Attack -- Watermark Replacement
+# Attack -- Example for Watermark Replacement
 ## AWM
 Before running the command, (1) please put the data to the folder "attack_audioseal" or the folder "attack_timbre", and then (2) change dataset to your own data in line 308 and line 316.
 ```
