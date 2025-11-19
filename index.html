@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Learning to Evade: Statistical Learning-Based Adaptive Attacks Towards Audio Watermarking</title>
+	<title>Learning to Evade: Adaptive Attacks on Audio Watermarking</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<!-- Latest compiled and minified Bootstrap CSS -->
@@ -53,14 +53,15 @@
 
 	<div class="container">
 		<center>
-		<h1>Learning to Evade: Statistical Learning-Based Adaptive Attacks Towards Audio Watermarking</h1>
+		<h1>Learning to Evade: Adaptive Attacks on Audio Watermarking</h1>
 		<div style="border: 1px solid black; margin-top: 20px; margin-bottom: 10px;"></div>
 
-		<p> <b>Abstract:</b>The abuse of original audios has attracted widespread attention in the society. Audio watermarking has been proposed as a way to assert user copyright of audios. However, existing audio watermarking methods are vulnerable to adversarial attacks. Our findings reveal that the message probabilities output by the watermark decoder follow a normal distribution for both clean and watermarked audio.
-			This observation can be leveraged to detect existing audio watermark attacks. In this paper, we introduce AWM, an adaptive audio watermark attack method designed to bypass existing detection strategies.
-			AWM employs a two-step optimization process: the first step ensures the success of the watermark attack, while the second step focuses on enhancing audio quality. The proposed attack iteratively estimates the parameters of the normal distribution using limited audio samples based on the target audio and applies adaptive optimization to adjust the decoded message probabilities toward the estimated normal range.
-			We evaluate AWM on two watermarking methods across three diverse voice datasets and compare the results with existing audio watermark attack techniques.
-			Our experiments demonstrate that the proposed attack achieves a high attack success rate while effectively bypassing detection, with detection success rates remaining under 10% for watermark replacement and watermark creation, and at 0% for watermark removal.</p>
+		<p> <b>Abstract:</b>With the advent of advanced generative audio technologies, the misuse of original and copyrighted audio content has attracted widespread public attention. Audio watermarking has been proposed as a means of asserting copyright ownership over audio content.
+			However, existing audio watermarking methods are vulnerable to adversarial attacks. Our analysis shows that the message probabilities output by the watermark decoder follow normal distributions for both clean and watermarked audio, 
+			a property that can be exploited by defense mechanisms to detect watermark manipulations. In this paper, we introduce AWM, an adaptive audio watermark attack method designed to bypass existing defense strategies. 
+			AWM employs a two-stage optimization procedure: the first stage enforces successful watermark attacks, while the second stage improves the resulting audio quality. 
+			The attack iteratively estimates the parameters of a normal distribution from a limited set of audio samples derived from the target audio, and then uses adaptive optimization to steer the decoded message probabilities toward the estimated distribution range. 
+			We evaluate AWM on two watermarking methods across three diverse voice datasets.</p>
 		</p>
 		<div style="border-top: 1px solid grey;"></div>
 		<h2>Demonstration </h2>
